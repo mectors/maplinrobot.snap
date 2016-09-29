@@ -18,12 +18,18 @@ apps:
 parts:
  robot:
   plugin: go
-  source: src
+  source: github.com/mectors/maplinrobotarm
   stage-packages:
     - libusb-1.0-0
   go-packages:
     - github.com/fromkeith/gorest
     - github.com/kylelemons/gousb/usb
+ web:
+  plugin: go
+  source: github.com/mectors/maplinrobotarmweb
+  stage-packages:
+    - libusb-1.0-0
+  go-packages:
     - github.com/go-martini/martini
  move:
   plugin: dump
